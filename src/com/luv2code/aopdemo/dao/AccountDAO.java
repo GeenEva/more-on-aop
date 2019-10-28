@@ -1,5 +1,8 @@
 package com.luv2code.aopdemo.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import com.luv2code.aopdemo.Account;
@@ -14,6 +17,21 @@ public class AccountDAO {
 		
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
 		
+	}
+	
+	public List<Account> findAccounts(){
+		
+		List<Account> myAccounts = new ArrayList<>();
+		
+		Account temp1 = new Account("Evo", "silver");
+		Account temp2 = new Account("Dragan", "bronze");
+		Account temp3 = new Account("Avra", "gold");
+		
+		myAccounts.add(temp1);
+		myAccounts.add(temp2);
+		myAccounts.add(temp3);
+		
+		return myAccounts;
 	}
 	
 	public boolean doWork() {
